@@ -1,0 +1,223 @@
+/* Definição de cores principais */
+:root {
+    --cor-primaria: #4A90E2;
+    --cor-secundaria: #F4F4F4;
+    --cor-destaque: #F5A623;
+}
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-secundaria);
+    color: #333;
+}
+
+/* Títulos */
+h2 {
+    color: var(--cor-primaria);
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: Garamond;
+}
+
+h3 {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: Garamond
+}
+
+/* Estilo para parágrafos */
+p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Menu de navegação fixo */
+.menu {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 5px 5px 5px;
+}
+
+.menu ul li a:hover {
+    color: var(--cor-destaque);
+    padding: 5px 10px;
+    background-color: var(--cor-secundaria);
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    transition: 0.8s;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+/* Seções de conteúdo */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Imagens dentro das seções */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+/* Container para os cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo das imagens nos cards */
+.card img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 200px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos cards */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Alinhamento centralizado para seções */
+#sobre,
+#aplicacoes {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Grid para os tipos de IA e outras seções */
+#informacoes,
+#comoFunciona,
+#tiposIA {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Ajustes para telas de até 724px de largura */
+@media (max-width: 724px) {
+
+    /* Reduzindo o tamanho da fonte para títulos */
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustando a largura máxima do conteúdo */
+    main {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Melhorando o espaçamento do menu */
+
+    .menu ul li a {
+        font-size: 17px;
+    }
+
+    /* Ajustando os cards */
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    /* Seções de conteúdo em grid */
+    #informacoes,
+    #comoFunciona,
+    #tiposIA {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    #comoFunciona {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Imagens nas seções */
+    section img {
+        border-radius: 10px;
+    }
+
+}
